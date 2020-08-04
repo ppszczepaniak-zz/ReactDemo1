@@ -15,7 +15,8 @@ class ToDoList extends React.Component {
         this.state = {
             itemsArray: []
         };
-        this.handleSubmit = this.handleSubmit.bind(this);         // This binding is necessary to make `this` work in the callback
+        this.addTask = this.addTask.bind(this);         // This binding is necessary to make `this` work in the callback
+        this.removeTask = this.removeTask.bind(this);         // This binding is necessary to make `this` work in the callback
 
     }
 
@@ -26,7 +27,7 @@ class ToDoList extends React.Component {
                     <Header/>
                 </div>
                 <div className="inputAndButtonDiv">
-                    <form onSubmit={this.handleSubmit}>
+                    <form onSubmit={this.addTask}>
                         <input
                             id="taskInput"
                             placeholder="Enter your task..."
@@ -39,13 +40,16 @@ class ToDoList extends React.Component {
                     </form>
                 </div>
                 <div className="listOfTasks">
-                    <ToDoItems entries={this.state.itemsArray}/>
+                    <ToDoItems
+                        entries={this.state.itemsArray}
+                        removeTask={this.removeTask}
+                    />
                 </div>
             </div>
         );
     }
 
-    handleSubmit(e) {
+    addTask(e) {
         e.preventDefault();
         const input = this.inputRef;    //alternative: document.getElementById("taskInput");
         if (input.current.value !== "") {
@@ -58,6 +62,16 @@ class ToDoList extends React.Component {
             });
             input.current.value = "";
         }
+    }
+
+    removeTask(key) {
+        let filteredItems = this.state.itemsArray.filter(function (item) {
+            return (item.key !== key);
+        }); //we filter all entries except the one which is clicked
+
+        this.setState({
+            itemsArray: filteredItems
+        })
     }
 }
 
