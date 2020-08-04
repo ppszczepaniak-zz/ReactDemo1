@@ -15,7 +15,7 @@ class ToDoList extends React.Component {
         this.state = {
             itemsArray: []
         };
-        this.handleClick = this.handleClick.bind(this);         // This binding is necessary to make `this` work in the callback
+        this.handleSubmit = this.handleSubmit.bind(this);         // This binding is necessary to make `this` work in the callback
 
     }
 
@@ -26,23 +26,26 @@ class ToDoList extends React.Component {
                     <Header/>
                 </div>
                 <div className="taskInput">
-                    <input
-                        id="taskInput"
-                        placeholder="Enter your task..."
-                        ref={this.inputRef}
-                    >
-                    </input>
-                    <button className="myButton"
-                            onClick={this.handleClick}>
-                        +
-                    </button>
+                    <form onSubmit={this.handleSubmit}>
+                        <input
+                            id="taskInput"
+                            placeholder="Enter your task..."
+                            ref={this.inputRef}
+                        >
+                        </input>
+                        <button className="myButton">
+                            +
+                        </button>
+                    </form>
+
                 </div>
                 <ToDoItems entries={this.state.itemsArray}/>
             </div>
         );
     }
 
-    handleClick() {
+    handleSubmit(e) {
+        e.preventDefault();
         const input = this.inputRef;    //alternative: document.getElementById("taskInput");
         if (input.current.value !== "") {
             let newItem = {
