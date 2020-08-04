@@ -1,21 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import ToDoList from "./ToDoList";
 
-function Header() {
-    return (
-        <header>
-            <nav className="navbar navbar-light bg-light">
-        <span className="navbar-brand">
-          Todo list, mohterfucker! xD
-
-        </span>
-            </nav>
-        </header>);
-}
-
+const destination = document.getElementById('root');
 
 ReactDOM.render(
-    <Header/>,
-    document.getElementById('root')
+    <div>
+        <ToDoList/>
+    </div>,
+    destination
 );
