@@ -37,9 +37,11 @@ class ToDoList extends React.Component {
                             +
                         </button>
                     </form>
+                </div>
+                <div className="listOfTasks">
+                    <ToDoItems entries={this.state.itemsArray}/>
 
                 </div>
-                <ToDoItems entries={this.state.itemsArray}/>
             </div>
         );
     }
