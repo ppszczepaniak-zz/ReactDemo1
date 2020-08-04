@@ -5,12 +5,9 @@ body {
 }
 
 #root {
-    /*display: flex;*/
     background-color: #90caf9;
     border: 2px solid #FFF;
     border-radius: 5px;
-
-    /*justify-content: center;*/
 }
 
 .myHeader {
@@ -32,7 +29,6 @@ body {
 
 .inputAndButtonDiv input {
     font-size: 16px;
-    /*border: 2px solid #5d99c6;*/
     border-radius: 5px;
 }
 

@@ -78,6 +78,8 @@ class ToDoList extends React.Component {
 
 //TO DO
 /*
+add flip move
+
 add done task below (strikethrough)
 remove done task as you now remove normal task
  */
