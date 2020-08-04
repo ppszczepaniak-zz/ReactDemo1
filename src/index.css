@@ -21,7 +21,7 @@ body {
 /*    justify-content: center;*/
 /*}*/
 
-.myInput {
+.taskInput {
     display: flex;
     justify-content: center;
 }
