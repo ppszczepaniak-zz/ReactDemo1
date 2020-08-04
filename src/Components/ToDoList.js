@@ -32,7 +32,8 @@ class ToDoList extends React.Component {
                         ref={this.inputRef}
                     >
                     </input>
-                    <button onClick={this.handleClick}>
+                    <button className="myButton"
+                            onClick={this.handleClick}>
                         +
                     </button>
                 </div>
@@ -43,17 +44,16 @@ class ToDoList extends React.Component {
 
     handleClick() {
         const input = this.inputRef;    //alternative: document.getElementById("taskInput");
-
-        let newItem = {
-            text: input.current.value, //don't use "current" in alt version
-            key: Date.now() //we use Date.now to give unique key for components
-        };
-
-        this.setState({
-            itemsArray: this.state.itemsArray.concat(newItem)
-        });
-
-        input.current.value = "";
+        if (input.current.value !== "") {
+            let newItem = {
+                text: input.current.value, //don't use "current" in alt version
+                key: Date.now() //we use Date.now to give unique key for components
+            };
+            this.setState({
+                itemsArray: this.state.itemsArray.concat(newItem)
+            });
+            input.current.value = "";
+        }
     }
 }
 
