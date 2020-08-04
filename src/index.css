@@ -18,19 +18,19 @@ body {
     justify-content: center;
     font-weight: bold;
     padding: 10px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
 }
 
 .inputAndButtonDiv {
     display: flex;
     justify-content: center;
     padding: 10px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
     font-size: 16px;
     height: 30px;
 }
 
-.inputAndButtonDiv input{
+.inputAndButtonDiv input {
     font-size: 16px;
     /*border: 2px solid #5d99c6;*/
     border-radius: 5px;
@@ -53,28 +53,31 @@ body {
     cursor: pointer;
 }
 
-.listOfTasks .theList{
+.listOfTasks .theList {
     list-style: none;
-    padding-left: 0px;
+    padding-left: 0;
     padding-top: 10px;
     padding-bottom: 10px;
     min-height: 25px;
     font-size: 16px;
     border-top: 2px solid #ffffff;
     border-radius: 5px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .listOfTasks .theList li {
     color: #333;
-    background-color: rgba(255,255,255,.5);
+    background-color: rgba(255, 255, 255, .5);
     padding: 10px;
-margin: 10px;
-
+    margin: 10px;
     border-radius: 5px;
+    transition: background-color .2s ease-out;
 }
 
-
+.listOfTasks .theList li:hover {
+    background-color: pink;
+    cursor: pointer;
+}
 
 
 /*.wrapper {*/

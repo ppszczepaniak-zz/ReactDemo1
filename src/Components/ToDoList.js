@@ -65,7 +65,7 @@ class ToDoList extends React.Component {
     }
 
     removeTask(key) {
-        let filteredItems = this.state.itemsArray.filter(function (item) {
+        const filteredItems = this.state.itemsArray.filter(function (item) {
             return (item.key !== key);
         }); //we filter all entries except the one which is clicked
 
@@ -74,5 +74,12 @@ class ToDoList extends React.Component {
         })
     }
 }
+
+
+//TO DO
+/*
+add done task below (strikethrough)
+remove done task as you now remove normal task
+ */
 
 export default ToDoList;
