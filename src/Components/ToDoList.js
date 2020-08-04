@@ -25,7 +25,7 @@ class ToDoList extends React.Component {
                 <div className="myHeader">
                     <Header/>
                 </div>
-                <div className="taskInput">
+                <div className="inputAndButtonDiv">
                     <form onSubmit={this.handleSubmit}>
                         <input
                             id="taskInput"
@@ -40,7 +40,6 @@ class ToDoList extends React.Component {
                 </div>
                 <div className="listOfTasks">
                     <ToDoItems entries={this.state.itemsArray}/>
-
                 </div>
             </div>
         );
