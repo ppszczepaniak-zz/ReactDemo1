@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import ToDoList from "./ToDoList";
+import ToDoList from "./Components/ToDoList";
 
 const destination = document.getElementById('root');
 

@@ -16,10 +16,10 @@ body {
     background-color: #04dc3b;
 }
 
-.myButton {
-    display: flex;
-    justify-content: center;
-}
+/*.myButton {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*}*/
 
 .myInput {
     display: flex;
