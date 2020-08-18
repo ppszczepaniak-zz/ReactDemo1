@@ -4,7 +4,7 @@ import ToDoItems from "../Components/ToDoItems";
 function Header() {
     return (
         <header>
-            Initial compiler redux
+            My To-Do list
         </header>);
 }
 

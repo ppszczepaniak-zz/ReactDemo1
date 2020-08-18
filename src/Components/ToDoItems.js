@@ -17,7 +17,7 @@ class ToDoItems extends React.Component {
             </ul>);
     }
 
-    createTasks(item) {
+    createTasks(item) { //keys help React identify which items have changed (must be unique)
         return <li onClick={()=>this.deleteItem(item.key)}
             key={item.key}>
             {item.text}
