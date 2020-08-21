@@ -12,7 +12,7 @@ class ToDoList extends React.Component {
     constructor(props) {
         super(props);
         this.inputRef = React.createRef(); //create reference for input box
-        this.state = {
+        this.state = { //state is similar to props, but it is private and fully controlled by the component.
             itemsArray: []
         };
         this.addTask = this.addTask.bind(this);         // This binding is necessary to make `this` work in the callback
